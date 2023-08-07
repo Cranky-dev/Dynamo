@@ -1,0 +1,39 @@
+<html><head>
+<script>
+function browser() {
+const params = new URLSearchParams(location.search);
+const browser1 = params.get('q')
+let result = browser1.replace("%3A", ":");
+let browser = result.replace("%2f", "/");
+document.getElementById("window").src = browser;
+}
+function full() {
+document.getElementById("window").requestFullscreen()
+}
+</script>
+<style>
+body {
+background-color: #2A3439;
+color: #DCDCDC;
+}
+</style>
+<title>Cranky Browser</title>
+</head>
+
+
+
+<body onload="browser()">
+<h1>Dynamo Browser</h1>
+<h3></h3>
+<form action="">
+<input list="sites" type="text" name="q" />
+<input type="submit" value="Q" />
+<datalist id="sites">
+<option>https://doodlecricket.github.io/</option>
+<option>https://www.google.com/search?igu=1</option>
+<option>https://snake.googlemaps.com/</option>
+</datalist>
+</form>
+<iframe onclick="requestFullscreen()" id="window" src="https://www.google.com" height="720" width="1080" allowfullscreen="True"></iframe>
+<br>
+<button onclick="full()">fullscreen</button>
