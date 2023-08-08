@@ -16,6 +16,28 @@ body {
 background-color: #2A3439;
 color: #DCDCDC;
 }
+  .altclr {
+      background-color: #456599;
+    }
+  .tirclr {
+    background-color: #4f6069;
+  }
+  a:link {
+    color: #ff992b;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #a8651d;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #d1ce32;
+    text-decoration: noneof;
+  }
+  a:active {
+    color: #b5b469;
+    text-decoration: none;
+  }
 </style>
 <title>Cranky Browser</title>
 </head>
@@ -23,11 +45,14 @@ color: #DCDCDC;
 
 
 <body onload="browser()">
+<div class="altclr">
+<br />
 <h1>Dynamo Browser</h1>
-<h3></h3>
+<br />
+</div>
 <form action="">
-<input list="sites" type="text" name="q" />
-<input type="submit" value="Q" />
+<input list="sites" type="text" name="q" class="tirclr"/>
+<input type="submit" value="Q" class="altclr" />
 <datalist id="sites">
 <option>https://doodlecricket.github.io/</option>
 <option>https://www.google.com/search?igu=1</option>
@@ -36,4 +61,5 @@ color: #DCDCDC;
 </form>
 <iframe onclick="requestFullscreen()" id="window" src="https://www.google.com" height="720" width="1080" allowfullscreen="True"></iframe>
 <br>
-<button onclick="full()">fullscreen</button>
+<button onclick="full()" class="altclr">fullscreen</button>
+</body>
