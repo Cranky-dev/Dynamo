@@ -5,7 +5,8 @@ function lucky() {
   //WILL FIX AT A LATER DATE
   const links = ["https://wikipedia.org", "https://doodlecricket.github.io/", "https://maze.toys/mazes/medium/daily/"];
   const random = Math.floor(Math.random() * months.length);
-  document.getElementById("window").src = links[random];
+  window.location.href = "https://cranky-dev.github.io/Dynamo/search.html?q=" + links[random];
+  location.reload();
 }
 function browser() {
 const params = new URLSearchParams(location.search);
