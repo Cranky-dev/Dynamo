@@ -1,7 +1,7 @@
 <html><head>
 <script>
 function lucky() {
-  const links = ["https://wikipedia.org", "https://doodlecricket.github.io/", "https://maze.toys/mazes/medium/daily/", "https://www.doordash.com/?ignore_splash_experience=true&&utm_source=Google&utm_medium=SEMb&utm_campaign=CX_US_SE_SB_GO_ACQ_TETXXX_20108655795_RSTRNT_+BR_ACQ_INMKT_GenDeliveryxx_EVG_CPAx_EPX_COUSA_EN_EN_X_DOOR_GO_SE_TXT_BRXTCPAEXP&utm_term=doordash&utm_content=91210150062&kclickid=_k_Cj0KCQjwz8emBhDrARIsANNJjS7brD-roahgtNRJt7D-GPTH8mxx7yJfJZsyEli0ps24MHgceiIDI7kaAkatEALw_wcB_k_&utm_adgroup_id=91210150062&utm_creative_id=426553919499&utm_keyword_id=kwd-63454401416&gclid=Cj0KCQjwz8emBhDrARIsANNJjS7brD-roahgtNRJt7D-GPTH8mxx7yJfJZsyEli0ps24MHgceiIDI7kaAkatEALw_wcB&gclsrc=aw.ds", "https://www.brainyquote.com/"];
+  const links = ["https://wikipedia.org", "https://doodlecricket.github.io/", "https://maze.toys/mazes/medium/daily/"];
   const random = Math.floor(Math.random() * months.length);
   document.getElementById("window").src = links[random];
 }
@@ -69,4 +69,5 @@ color: #DCDCDC;
 <iframe onclick="requestFullscreen()" id="window" src="https://www.google.com" height="720" width="1080" allowfullscreen="True"></iframe>
 <br>
 <button onclick="full()" class="altclr">fullscreen</button>
+<button onclick="lucky()" class="altclr">I feel Lucky</button>
 </body>
