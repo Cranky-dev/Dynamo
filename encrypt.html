@@ -1,0 +1,59 @@
+<script>
+function browser() {
+const params = new URLSearchParams(location.search);
+const browser1 = params.get('q')
+let result = browser1.replace("%3A", ":");
+let browser = result.replace("%2f", "/");
+let encrypt = btoa(browser)
+document.getElementById("window").value = encrypt;
+}
+
+<style>
+body {
+background-color: #2A3439;
+color: #DCDCDC;
+}
+  .altclr {
+      background-color: #456599;
+    }
+  .tirclr {
+    background-color: #4f6069;
+  }
+  a:link {
+    color: #ff992b;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #a8651d;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #d1ce32;
+    text-decoration: none;
+  }
+  a:active {
+    color: #b5b469;
+    text-decoration: none;
+  }
+</style>
+<title>Dynamo|Encrypt</title>
+</head>
+<body>
+<div class="altclr">
+<br />
+<h1>Dynamo Browser</h1>
+<br />
+</div>
+<br />
+<br />
+<form action="">
+<input list="sites" type="text" name="q" class="tirclr"/>
+<input type="submit" value="Q" class="altclr" />
+<datalist id="sites">
+<option>https://doodlecricket.github.io/</option>
+<option>https://www.google.com/search?igu=1</option>
+<option>https://snake.googlemaps.com/</option>
+<p id="window"></p>
+</datalist>
+</form>
+</body>
