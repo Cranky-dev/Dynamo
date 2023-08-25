@@ -1,0 +1,43 @@
+<html>
+<head>
+<script>
+function browser() {
+const params = new URLSearchParams(location.search);
+const browser1 = params.get('q')
+let result = browser1.replace("%3A", ":");
+let browser = result.replace("%2f", "/");
+document.getElementById("window").src = browser + ".html";
+}
+</script>
+<style>
+body {
+background-color: #2A3439;
+color: #DCDCDC;
+}
+  .altclr {
+      background-color: #456599;
+    }
+  .tirclr {
+    background-color: #4f6069;
+  }
+  a:link {
+    color: #ff992b;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #a8651d;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #d1ce32;
+    text-decoration: none;
+  }
+  a:active {
+    color: #b5b469;
+    text-decoration: none;
+  }
+</style>
+<title>Dynamo|Notitia Infinitum</title>
+</head>
+<body>
+
