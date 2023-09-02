@@ -44,14 +44,19 @@ color: #DCDCDC;
   <h1>TEXT EDITOR</h1>
   </br>
   </div>
+</br>
+</br>
 <textarea class="tirclr" id="textarea" name="name" rows="15" cols="100" placeholder="Your text here"></textarea>
-<button type="button" onclick="f10()" data-toggle="tooltip" data-placement="top" title="Download" class="altclr">Download</button>
+</br>
+<input type="text" id="ext" placeholder="example.txt" class="tirclr" />
+<button type="button" onclick="download()" data-toggle="tooltip" data-placement="top" title="Download" class="altclr">Download</button>
   <script>
-    function f10() {
+    function download() {
   const content = document.getElementById("textarea").value;
+  const filename = document.getElementById("ext").value;
   var save = document.createElement("a");
   save.setAttribute("href", "data:text/plain;charset=umenttttf-8," + encodeURI(content));
-  save.setAttribute("download", content.slice(0, 17) + ".txt");
+  save.setAttribute("download", filename);
 
   document.body.appendChild(save);
   save.click();
