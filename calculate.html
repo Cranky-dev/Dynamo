@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <style>
+body {
+background-color: #2A3439;
+color: #DCDCDC;
+}
+  .altclr {
+      background-color: #456599;
+    }
+  .tirclr {
+    background-color: #4f6069;
+  }
+  a:link {
+    color: #ff992b;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #a8651d;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #d1ce32;
+    text-decoration: none;
+  }
+  a:active {
+    color: #b5b469;
+    text-decoration: none;
+  }
+    </style>
+    <title>Dynamo|Calculator</title>
+  </head>
+  <body>
+    <input type="number" placeholder="number 1" id="in1"/>
+    <input type="number" placeholder="number 2" id="in2"/>
+    <select id="opr" oninput="change()">
+      <optgroup label="standard">
+        <option value="add" selected>add</option>
+        <option value="subtract">subtract</option>
+        <option value="multiply">multiply</option>
+        <option value="divide">divide</option>
+      </optgroup>
+    </select>
+  </br>
+    <h1 id="out"></h1>
+    <script>
+      function change() {
+        const in1 = getElementById("in1").value
+        const in2 = getElementById("in2").value
+        const operator = getElementById("opr").value
+        if (operator == "add") {
+          getElementById("out").innerHTML = in1 + in2;
+        }
+        else if (operator == "subtract") {
+          getElementById("out").innerHTML = in1 - in2;
+        }
+        else if (operator == "multiply") {
+          getElementById("out").innerHTML = in1 * in2;
+        }
+        else if (operator == "divide") {
+          getElementById("out").innerHTML = in1 / in2;
+        }
+      }
+    </script>
+  </body>
+</html>
