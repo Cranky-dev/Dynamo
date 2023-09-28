@@ -31,11 +31,16 @@ color: #DCDCDC;
     <title>Dynamo|Calculator</title>
   </head>
   <body>
-    <h1 id="output">0</h1>
+    <div class="altclr">
   </br>
-    <input type="number" placeholder="number 1" id="in1"/>
-    <input type="number" placeholder="number 2" id="in2"/>
-    <select id="opr">
+    <h1>Calculator</h1>
+  </br>
+    </div>
+  </br>
+      <h1 id="output">0</h1>
+    <input type="number" placeholder="number 1" id="in1" class="tirclr"/>
+    <input type="number" placeholder="number 2" id="in2" class="tirclr"/>
+    <select id="opr" class="tirclr">
       <optgroup label="standard">
         <option value="add" selected>add</option>
         <option value="subtract">subtract</option>
@@ -43,7 +48,7 @@ color: #DCDCDC;
         <option value="divide">divide</option>
       </optgroup>
     </select>
-    <button onclick="change()">Solve!</button>
+    <button onclick="change()" class="altclr">Solve!</button>
     <script>
       function change() {
         const in1 = document.getElementById("in1").value
