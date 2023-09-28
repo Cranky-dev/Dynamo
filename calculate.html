@@ -1,6 +1,4 @@
-<!--
-doesnt work: fix later
-  <html>
+<html>
   <head>
     <style>
 body {
@@ -51,20 +49,22 @@ color: #DCDCDC;
         const in2 = getElementById("in2").value
         const operator = getElementById("opr").value
         if (operator == "add") {
-          getElementById("out").innerHTML = in1 + in2;
+          const out = in1 + in2;
+          getElementById("out").innerHTML = out;
         }
         else if (operator == "subtract") {
-          getElementById("out").innerHTML = in1 - in2;
+          const out = in1 - in2;
+          getElementById("out").innerHTML = out;
         }
         else if (operator == "multiply") {
-          getElementById("out").innerHTML = in1 * in2;
+          const out = in1 * in2;
+          getElementById("out").innerHTML = out;
         }
         else if (operator == "divide") {
-          getElementById("out").innerHTML = in1 / in2;
+          const out = in1 / in2;
+          getElementById("out").innerHTML = out;
         }
       }
     </script>
   </body>
 </html>
-
--->
