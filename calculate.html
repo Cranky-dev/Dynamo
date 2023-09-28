@@ -31,9 +31,11 @@ color: #DCDCDC;
     <title>Dynamo|Calculator</title>
   </head>
   <body>
+    <h1 id="output">0</h1>
+  </br>
     <input type="number" placeholder="number 1" id="in1"/>
     <input type="number" placeholder="number 2" id="in2"/>
-    <select id="opr" oninput="change()">
+    <select id="opr">
       <optgroup label="standard">
         <option value="add" selected>add</option>
         <option value="subtract">subtract</option>
@@ -41,28 +43,27 @@ color: #DCDCDC;
         <option value="divide">divide</option>
       </optgroup>
     </select>
-  </br>
-    <h1 id="out"></h1>
+    <button onclick="change()">Solve!</button>
     <script>
       function change() {
-        const in1 = getElementById("in1").value
-        const in2 = getElementById("in2").value
-        const operator = getElementById("opr").value
+        const in1 = document.getElementById("in1").value
+        const in2 = document.getElementById("in2").value
+        const operator = document.getElementById("opr").value
         if (operator == "add") {
           const out = in1 + in2;
-          getElementById("out").innerHTML = out;
+          document.getElementById("output").innerHTML = out;
         }
         else if (operator == "subtract") {
           const out = in1 - in2;
-          getElementById("out").innerHTML = out;
+          document.getElementById("output").innerHTML = out;
         }
         else if (operator == "multiply") {
           const out = in1 * in2;
-          getElementById("out").innerHTML = out;
+          document.getElementById("output").innerHTML = out;
         }
         else if (operator == "divide") {
           const out = in1 / in2;
-          getElementById("out").innerHTML = out;
+          document.getElementById("output").innerHTML = out;
         }
       }
     </script>
