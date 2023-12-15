@@ -69,7 +69,11 @@ color: #DCDCDC;
 <option>https://snake.googlemaps.com/</option>
 </datalist>
 </form>
-<iframe onclick="requestFullscreen()" id="window" src="https://www.google.com" height="720" width="1080" allowfullscreen="True"></iframe>
+<div id="window">
+<button onclick="document.getElementById('window1').contentWindow.history.back()" class="altclr">&lt;</button>
+<button onclick="document.getElementById('window1').contentWindow.history.forward()" class="altclr">&gt;</button>
+<iframe id="window1" src="https://www.google.com" height="720" width="1080" allowfullscreen="True"></iframe>
+</div>
 <br>
 <button onclick="full()" class="altclr">fullscreen</button>
 <button onclick="lucky()" class="altclr">Lucky,Is How I Feel</button>
