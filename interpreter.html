@@ -8,7 +8,7 @@
   <body>
     <input id="name" placeholder="example.txt"/>
     <input id="mime" placeholder="text/plain"/>
-    <button onclick="download()"
+    <button onclick="download()">download</button>
     <textarea id="code" rows="15" cols="100"></textarea>
 <br>
 <iframe id="display"/>
@@ -20,6 +20,11 @@
         var save = document.createElement("a");
         save.setAttribute("href", + uri);
         save.setAttribute("download", filename);
+      }
+      function change() {
+        let blob = new Blob([document.getElementById("code").value], {type: document.getElementById("mime").value});
+        let uri = URL.createObjectURL(blob);
+        document.getElementById("display").src = uri;
       }
     </script>
   </body>
