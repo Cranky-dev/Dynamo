@@ -2,14 +2,14 @@
   <head>
     <title>Dynamo|interpreter</title>
     <style>
-      @import url("styles.css");
+      @import url("style.css");
     </style>
   </head>
   <body>
     <input id="name" placeholder="example.txt"/>
     <input id="mime" placeholder="text/plain"/>
     <button onclick="download()">download</button>
-    <textarea id="code" rows="15" cols="100"></textarea>
+    <textarea id="code" rows="15" cols="100" onchange="change()"></textarea>
 <br>
 <iframe id="display"/>
     <script>
