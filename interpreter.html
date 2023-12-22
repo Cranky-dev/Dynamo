@@ -20,6 +20,9 @@
         var save = document.createElement("a");
         save.setAttribute("href", + uri);
         save.setAttribute("download", filename);
+        document.body.appendChild(save);
+        save.click();
+        adocument.body.removeChild(save);
       }
       function change() {
         let blob = new Blob([document.getElementById("code").value], {type: document.getElementById("mime").value});
