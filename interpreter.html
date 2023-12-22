@@ -6,11 +6,13 @@
     </style>
   </head>
   <body>
+    <input id="mime"/>
     <textarea id="code" rows="15" cols="100"></textarea>
     <iframe id="display"/>
     <script>
-      function display() {
-        
+      function download() {
+        let blob = new Blob([document.getElementById("code")], {type: document.getElementById("mime")});
+        document.getElementById() URL.createObjectURL(blob);
       }
     </script>
   </body>
