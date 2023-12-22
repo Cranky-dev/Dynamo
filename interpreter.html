@@ -6,13 +6,20 @@
     </style>
   </head>
   <body>
-    <input id="mime"/>
+    <input id="name" placeholder="example.txt"/>
+    <input id="mime" placeholder="text/plain"/>
+    <button onclick="download()"
     <textarea id="code" rows="15" cols="100"></textarea>
-    <iframe id="display"/>
+<br>
+<iframe id="display"/>
     <script>
       function download() {
-        let blob = new Blob([document.getElementById("code")], {type: document.getElementById("mime")});
-        document.getElementById() URL.createObjectURL(blob);
+        const filename = document.getElementById("name")
+        let blob = new Blob([document.getElementById("code").value], {type: document.getElementById("mime").value});
+        let uri = URL.createObjectURL(blob);
+        var save = document.createElement("a");
+        save.setAttribute("href", + uri);
+        save.setAttribute("download", filename);
       }
     </script>
   </body>
